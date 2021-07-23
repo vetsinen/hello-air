@@ -12,11 +12,12 @@ function HelloWorldApp() {
     const records = useRecords(table);
 
     const events = records.map(record => {
-        return (
+        return (<pre>
             <div key={record.id}>
-                {record.getCellValue('Price') || 'not named record'}
+                {record.getCellValue('title') || ''},
+                {record.getCellValue('price') || ''},
             </div>
-        );
+        </pre>);
     });
 
     return (
@@ -24,4 +25,4 @@ function HelloWorldApp() {
     );
 }
 
-initializeBlock(() => <HelloWorldApp />);
+initializeBlock(() => <HelloWorldApp/>);
