@@ -9,6 +9,7 @@ function HelloWorldApp() {
     // YOUR CODE GOES HERE
     const base = useBase();
     const table = base.getTableByName('events');
+
     const records = useRecords(table);
 
     const events = records.map(record => {
